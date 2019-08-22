@@ -27,8 +27,12 @@ public class AirJump extends AirAbility implements PassiveAbility {
 		if (!player.isOnGround()) {
 			player.setAllowFlight(true);
 			t = t+1;
+                        if (player.isOnGround()) {
+                        player.setAllowFlight(false)
+                        }
 			
 			if(t < 40) {
+                                player.setAllowFlight(false)
 				return;
 				}
 			}
